@@ -53,7 +53,7 @@
             result[urls[i]] = Object.assign({}, responses[i]);
           }
 
-          // Stringify the Object. json_space is set by the prettyPrint option.
+          // Stringify the Object. json_space is set by the pretty_print option.
           result = JSON.stringify(result, null, json_space);
 
           // Write to output-file
