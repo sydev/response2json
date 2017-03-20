@@ -1,0 +1,34 @@
+{
+  "name": "response2json",
+  "version": "1.0.0",
+  "description": "Save HTTP Responses as JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sydev/response2json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sydev/response2json/issues"
+  },
+  "homepage": "https://github.com/sydev/response2json",
+  "keywords": [
+    "json",
+    "http",
+    "response",
+    "request"
+  ],
+  "author": "Dominik Winter <dominik.winter92@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fs-promise": "^2.0.0",
+    "request": "^2.34",
+    "request-promise": "^4.1.1",
+    "yargs": "^7.0.1"
+  },
+  "devDependencies": {
+    "jest": "^19.0.2"
+  }
+}
