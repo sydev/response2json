@@ -12,7 +12,7 @@
 
     afterAll(() => {
       let response_path = path.resolve(__dirname, '../response.json'),
-        test_path       = path.resolve(__dirname, '../test.json'),
+        test_path       = path.resolve(__dirname, '../temp_dir'),
         pretty_path     = path.resolve(__dirname, '../pretty.json');
 
       return Promise.all([
@@ -33,8 +33,8 @@
         });
     });
 
-    test('with {output_file: "test.json"}', () => {
-      return response2json(url, {output_file: 'test.json'})
+    test('with {output_file: "temp_dir/test.json"}', () => {
+      return response2json(url, {output_file: 'temp_dir/test.json'})
         .then(fs.readFile)
         .then(content => {
           expect(JSON.parse(content)).not.toThrow(SyntaxError);
