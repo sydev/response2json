@@ -61,8 +61,10 @@
             .then(err => {
               if (err) return reject(err);
               resolve(filepath);
-            });
-        });
+            })
+            .catch(reject);
+        })
+        .catch(reject);
     });
   };
 

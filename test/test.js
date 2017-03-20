@@ -8,7 +8,7 @@
 
   const url = 'https://example.com';
 
-  describe(`Request ${url} and save the response as response.json`, () => {
+  describe(`Request ${url} and save the response as JSON file`, () => {
 
     afterAll(() => {
       let response_path = path.resolve(__dirname, '../response.json'),
