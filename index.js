@@ -43,7 +43,7 @@
       Promise.all(reqs)
         .then(responses => {
           let result = {},
-            filepath = path.join(process.cwd(), options.output_file);
+            filepath = options.output_file;
 
           i   = 0;
           len = responses.length;
