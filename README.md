@@ -54,6 +54,14 @@ Default: `false`
 
 Save the response in a more humanreadable form (Add Whitespaces to json file).
 
+## Development
+
+Test:  
+```
+npm test
+```
+
+
 ## License
 
 MIT © [Dominik Winter](https://github.com/sydev)
