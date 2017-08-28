@@ -7,6 +7,7 @@
 
   const default_options = {
     output_file: 'response.json',
+    format: 'json',
     pretty_print: false
   };
 
@@ -42,7 +43,7 @@
       // Execute all requests
       Promise.all(reqs)
         .then(responses => {
-          let result = {},
+          let result = options.format === 'json' ? {} : [],
             filepath = options.output_file;
 
           i   = 0;
@@ -50,7 +51,8 @@
 
           // Convert the responses to JSON Objects
           for (; i < len; i++) {
-            result[urls[i]] = Object.assign({}, responses[i]);
+            if (options.format === 'json') result[urls[i]] = Object.assign({}, responses[i]);
+            else result[i] = Object.assign({}, responses[i]);
           }
 
           // Stringify the Object. json_space is set by the pretty_print option.

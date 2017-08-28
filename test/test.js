@@ -55,6 +55,18 @@
         });
     });
 
+    test('with {format: "array"}', () => {
+      return response2json(url, {format: 'array'})
+        .then(fs.readFile)
+        .then(content => {
+          expect(JSON.parse(content)).not.toThrow(SyntaxError);
+          expect(JSON.parse(content)).toBeInstanceOf(Array);
+        })
+        .catch(err => {
+          expect(err).toBeNull();
+        });
+    });
+
   });
 
 })();

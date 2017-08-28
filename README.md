@@ -48,6 +48,12 @@ Default: `response.json`
 
 The filepath (relative to current working directory) where to store the responses.
 
+##### format
+Type: `String`
+Default: `json`
+
+The output format. Possible choices: `json`, `array`.
+
 ##### pretty_print
 Type: `Boolean`  
 Default: `false`
